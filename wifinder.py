@@ -1,5 +1,6 @@
 """ Wifinder """
 import os
+import scapy
 
 
 interfaces = os.listdir('/sys/class/net')
@@ -23,6 +24,10 @@ def get_network_interface():
         print("=" * len("Wrong interface, try again"))
         list_network_interfaces()
         get_network_interface()
+
+
+def sniff_ssid():
+    pass
 
 
 list_network_interfaces()
