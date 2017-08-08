@@ -1,6 +1,5 @@
 """ Wifinder """
 import os
-import scapy
 import subprocess
 
 
@@ -15,7 +14,9 @@ def list_network_interfaces():
 
 def get_network_interface():
     # set the wireless interface used for scanning
-    network_interface = raw_input("Name of scanning interface: ").lower()
+    input_network_interface = input("Name of scanning interface: ").lower()
+    network_interface = input_network_interface
+    return network_interface
     os.system('clear')
 
     # check if interface exists
